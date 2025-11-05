@@ -8,7 +8,7 @@ class rst_seq extends uvm_sequence;
 		repeat(N)begin
 			wait_for_grant();
 			req = seq_item::type_id::create("req");
-			req.randomize with {req.rst == 1;}
+			assert(req.randomize with {req.rst == 1;});
 			send_request(req);
 			wait_for_item_done();
 		end
@@ -53,7 +53,7 @@ string morse_table[string] = {
 	"8" : "---..",
 	"9" : "----.",
 	"0" : "-----"
-}
+};
 
 
 
@@ -62,8 +62,11 @@ class single_char_test extends uvm_sequence;
 	function new(string name = "single_char_test");
 		super.new(name);
 	endfunction
+	seq_item req;
 	task body();
 		foreach(morse_table[i])begin
+			wait_for_grant();
+			req = seq_item::type_id::create("req");
 			req.rst = 0;
 			foreach(morse_table[i][j])begin
 				if(morse_table[i][j] == ".")begin
