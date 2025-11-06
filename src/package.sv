@@ -9,4 +9,5 @@ package pkg;
 	`include "mor_monitor.sv";
 	`include "mor_agent.sv";
 	`include "mor_environment.sv";
+	`include "mor_test.sv";
 endpackage

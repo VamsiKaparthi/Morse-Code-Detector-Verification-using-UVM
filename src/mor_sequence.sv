@@ -57,9 +57,9 @@ string morse_table[string] = {
 
 
 
-class single_char_test extends uvm_sequence;
-	`uvm_object_utils(single_char_test)
-	function new(string name = "single_char_test");
+class single_char_seq extends uvm_sequence;
+	`uvm_object_utils(single_char_seq)
+	function new(string name = "single_char_seq");
 		super.new(name);
 	endfunction
 	seq_item req;
