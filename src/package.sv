@@ -8,4 +8,5 @@ package pkg;
 	`include "mor_driver.sv";
 	`include "mor_monitor.sv";
 	`include "mor_agent.sv";
+	`include "mor_environment.sv";
 endpackage
