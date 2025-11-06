@@ -9,7 +9,8 @@ module top;
 	always #5 clk = ~clk;
 	mor_inf vif(clk);
 	initial begin
-		uvm_config_db#(virtual mor_inf)::set("null", "*", "vif", vif);
+		uvm_config_db#(virtual mor_inf)::set(null, "*", "vif", vif);
+		run_test("test");
 		$finish;
 	end
 endmodule
