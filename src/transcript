@@ -1,0 +1,10 @@
+# vsim -c tb 
+# Start time: 10:04:46 on Nov 06,2025
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Error: (vopt-13130) Failed to find design unit tb.
+#         Searched libraries:
+#             work
+# Optimization failed
+# Error loading design
+# End time: 10:04:47 on Nov 06,2025, Elapsed time: 0:00:01
+# Errors: 1, Warnings: 0
